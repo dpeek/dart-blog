@@ -1,0 +1,15 @@
+name: blog
+version: 1.0.0
+author: David Peek
+description: A simple blog engine.
+dependencies:
+  html5lib: any
+  markdown:
+    path: /ws/dart/markdown
+  yaml: any
+  intl: any
+  csslib: any
+
+#dependencies:
+#  js: any
+#  unittest: any

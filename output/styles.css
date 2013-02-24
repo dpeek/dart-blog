@@ -1,0 +1,46 @@
+html, body {
+  margin: 0px;
+  font: 13px sans-serif;
+  height: 100%;
+}
+
+a {
+  color: #444;
+}
+
+a:hover {
+  background-color: #c0e8ff;
+}
+
+#banner {
+  background-color: #007fce;
+  color: white;
+}
+
+#banner h1 {
+  font-size: 20px;
+  padding: 32px 16px 16px 16px;
+}
+
+#content {
+  width: 640px;
+  height: 100%;
+  margin: 0px auto;
+}
+
+article {
+  padding: 16px;
+}
+
+article header span {
+  color: grey;
+}
+
+h1 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 13px;
+}

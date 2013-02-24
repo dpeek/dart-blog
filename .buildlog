@@ -1,0 +1,75 @@
+---
+build.dart --machine --changed=README.md --changed=static/favicon.ico --changed=static/styles.css --removed=fav...
+
+build.dart finished [425 ms]
+
+---
+build.dart --machine --changed=index.html
+
+build.dart finished [465 ms]
+
+---
+build.dart --machine --changed=index.html
+
+build.dart finished [391 ms]
+
+---
+build.dart --machine --removed=index.html
+
+build.dart finished [395 ms]
+
+---
+build.dart --machine --changed=index.html
+
+build.dart finished [381 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [387 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [386 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [394 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [385 ms]
+
+---
+build.dart --machine --removed=index.html
+
+build.dart finished [392 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [391 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [388 ms]
+
+---
+build.dart --machine --changed=output/favicon.ico --changed=output/styles.css --removed=static/favicon.ico --re...
+
+build.dart finished [387 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [386 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [388 ms]
+
