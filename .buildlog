@@ -73,3 +73,338 @@ build.dart --machine --changed=output/index.html
 
 build.dart finished [388 ms]
 
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [497 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [386 ms]
+
+---
+build.dart --machine --removed=output/index.html
+
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [386 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [412 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [420 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [406 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [423 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [419 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [417 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [415 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [407 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [412 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [408 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [406 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [407 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [410 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [411 ms]
+
+---
+build.dart --machine --removed=output/index.html
+
+build.dart finished [427 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [411 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [406 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [412 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [410 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [413 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [410 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [413 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [415 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [415 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [417 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [430 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [421 ms]
+
+---
+build.dart --machine --changed=output/styles.css
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [424 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [420 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [417 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [423 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [424 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [423 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [417 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [421 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [422 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [421 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [423 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [416 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [415 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [420 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [428 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [424 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [418 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [413 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [420 ms]
+
+---
+build.dart --machine --changed=post/2013-02-18-setup-and-research.markdown
+
+build.dart finished [412 ms]
+
+---
+build.dart --machine --changed=output/index.html
+
+build.dart finished [416 ms]
+

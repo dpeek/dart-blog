@@ -6,15 +6,40 @@ import 'package:yaml/yaml.dart';
 import 'package:intl/intl.dart';
 
 void main() {
-  var posts = [];
-  new Directory("post").listSync().forEach((path) {
-    if (path is File) {
-      if (new Path(path.fullPathSync()).extension == "markdown") {
-        posts.add(readPost(path));
-      }
-    }
+  var files = getMarkdownFiles();
+  var posts = files.map(readPost).toList();
+  writeIndex(posts);
+  posts.forEach(writePost);
+}
+
+/// Get a list of all markdown files in the site.
+List<File> getMarkdownFiles() {
+  var entries = new Directory("post").listSync();
+  entries.retainMatching((entry) {
+    return entry is File 
+        && new Path(entry.fullPathSync()).extension == "markdown";
   });
+  return entries;
+}
+
+var _RE_FRONT = new RegExp(r'---\n((.+\n)+)---', multiLine:true);
+
+/// Reads a post file from disk and returns a Post model.
+Post readPost(File file) {
+  var content = file.readAsStringSync(Encoding.UTF_8);
   
+  // Get the front matter.
+  var match = _RE_FRONT.firstMatch(content);
+  var front= new Map();
+  if (match != null) {
+    loadYaml(match[1]).forEach((k, v) => front[k] = v);
+    content = content.substring(match.end).trim();
+  }
+  return new Post(front['title'], content, DateTime.parse(front['date']));
+}
+
+/// Writes the sites index pags, containing all posts.
+void writeIndex(List<Post> posts) {
   var content = '';
   posts.reversed.forEach((post) {
     content = '$content${post.html}';
@@ -23,8 +48,12 @@ void main() {
   new File('output/index.html').writeAsString(html, mode:FileMode.WRITE, encoding:Encoding.UTF_8);
 }
 
-var _RE_FRONT = new RegExp(r'---\n((.+\n)+)---', multiLine:true);
+// Writes and individual post page.
+void writePost(Post post) {
+  // write post
+}
 
+/// The model for a post.
 class Post {
   String title;
   String content;
@@ -41,26 +70,7 @@ class Post {
   String get contentHtml => '<div>${markdownToHtml(content)}</div>';
 }
 
-Post readPost(file) {
-  var content = file.readAsStringSync(Encoding.UTF_8);
-  
-  // Get the front matter.
-  var match = _RE_FRONT.firstMatch(content);
-  var front= new Map();
-  if (match != null) {
-    loadYaml(match[1]).forEach((k, v) => front[k] = v);
-    content = content.substring(match.end).trim();
-  }
-  return new Post(front['title'], content, DateTime.parse(front['date']));
-}
-
-void writeMarkdown(content, path) {
-  content = createHtml(content);
-  path = "${path.substring(0, path.lastIndexOf('.') + 1)}html";
-  print("compiled $path");
-  new File(path).writeAsString(content, mode:FileMode.WRITE, encoding:Encoding.UTF_8);
-}
-
+/// An HTML helper until we sort out templates.
 String createHtml(String content) {
   return
 '''<html>

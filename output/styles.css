@@ -44,3 +44,17 @@ h1 {
 h2 {
   font-size: 13px;
 }
+
+pre { background-color: #fafafa; }
+
+pre .e { color: hsl(  0, 100%, 70%); } /* Error */
+pre .c { color: hsl(220,  20%, 65%); } /* Comment */
+pre .i { color: hsl(220,  20%, 20%); } /* Identifier */
+pre .k { color: hsl(220, 100%, 50%); } /* Keyword */
+pre .p { color: hsl(220,  20%, 50%); } /* Punctuation */
+pre .o { color: hsl(220,  40%, 50%); } /* Operator */
+pre .s { color: hsl( 40,  90%, 40%); } /* String */
+pre .n { color: hsl( 30,  70%, 50%); } /* Number */
+pre .t { color: hsl(180,  40%, 40%); } /* Type Name */
+pre .r { color: hsl(200, 100%, 50%); } /* Special Identifier */
+pre .a { color: hsl(220, 100%, 45%); } /* Arrow */
