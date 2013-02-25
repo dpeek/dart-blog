@@ -36,6 +36,10 @@ article header span {
   color: grey;
 }
 
+article header a {
+  text-decoration: none
+}
+
 h1 {
   font-size: 16px;
   margin-bottom: 4px;
