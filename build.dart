@@ -16,7 +16,7 @@ void main() {
   var files = getMarkdownFiles();
   var posts = files.map(readPost).toList();
   posts.sort((a,b) {
-    a.date.millisecondsSinceEpoch - b.date.millisecondsSinceEpoch;
+    return b.date.millisecondsSinceEpoch - a.date.millisecondsSinceEpoch;
   });
   writeIndex(posts);
   posts.forEach(writePost);
@@ -51,6 +51,7 @@ List<File> getMarkdownFiles() {
 
 var _RE_FRONT = new RegExp(r'---\n((.+\n)+)---', multiLine:true);
 var _RE_PREVIEW = new RegExp(r'\n\n--\n\n', multiLine:true);
+var _RE_LINK = new RegExp(r'\[.+?\]\:.+');
 
 /// Reads a post file from disk and returns a Post model.
 Post readPost(File file) {
@@ -66,12 +67,16 @@ Post readPost(File file) {
   
   var preview = content;
   var full = content;
-  
+
   var index = content.indexOf('\n\n--\n\n');
   if (index > -1) {
     preview = content.substring(0, index);
     full = content.split('\n\n--\n\n').join("\n\n");
   }
+
+  // Hacky: extract all reference links and append to preview.
+  var links = _RE_LINK.allMatches(content).map((m) => m[0]).join("\n");
+  preview = '$preview\n$links';
   
   var pwd = new Directory.current();
   var path = file.fullPathSync().substring(pwd.path.length + post.path.length + 2);

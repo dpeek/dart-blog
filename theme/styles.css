@@ -33,11 +33,15 @@ article {
 }
 
 article header span {
-  color: grey;
+  color: gray;
 }
 
 article header a {
   text-decoration: none
+}
+
+article header a:hover {
+  color: #007fce
 }
 
 h1 {
