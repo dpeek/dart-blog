@@ -15,6 +15,9 @@ void main() {
   prepareDeploy();
   var files = getMarkdownFiles();
   var posts = files.map(readPost).toList();
+  posts.sort((a,b) {
+    a.date.millisecondsSinceEpoch - b.date.millisecondsSinceEpoch;
+  });
   writeIndex(posts);
   posts.forEach(writePost);
 }
@@ -110,6 +113,8 @@ class Post {
   String get dateString {
     return new DateFormat('EEEE, d MMMM y', 'en_US').format(date);
   }
+  
+  bool get hasMore => content.length > preview.length;
 }
 
 // templates
@@ -139,6 +144,7 @@ String postPartial(Post post) { return
     <span>${post.dateString}</span>
   </header>
   <div>${markdownToHtml(post.preview)}</div>
+  ${post.hasMore ? '<a href="${post.path}">Read more...</a>' : ''}
 </article>''';
 }
 
