@@ -4,6 +4,7 @@ import 'package:markdown/markdown.dart' show markdownToHtml;
 import 'package:html5lib/parser.dart';
 import 'package:yaml/yaml.dart';
 import 'package:intl/intl.dart';
+import 'package:args/args.dart';
 
 var deploy = new Directory('deploy');
 var theme = new Directory('theme');
@@ -12,6 +13,51 @@ var post = new Directory('post');
 var title = "Dartful";
 
 void main() {
+  var parser = new ArgParser();
+  parser.addCommand('publish');
+  parser.addCommand('post');
+  
+  var result = parser.parse(new Options().arguments);
+  var command = result.command;
+  if (command != null) {
+    switch (command.name) {
+      case 'publish':
+        publish();
+      break;
+      case 'post':
+        var title = command.rest[0];
+        createPost(title);
+      break;
+    }
+  } else {
+    publish();
+  }
+}
+
+/// Creates an empty post with [title]
+void createPost(String title) {
+  var now = new DateTime.now().toString();
+  var date = now.split(':').getRange(0, 2).join(':');
+  var pathTitle = titleToPath(title);
+  var path = 'post/${now.split(' ')[0]}-$pathTitle.markdown';
+  var content =
+'''---
+title: $title
+date: $date
+---''';
+  print(path);
+//  new File(path).writeAsStringSync(content, mode:FileMode.WRITE, encoding:Encoding.UTF_8);
+}
+
+/// Sanitize a title for use in a file path
+String titleToPath(String title) {
+  title = title.toLowerCase();
+  title = title.replaceAll(new RegExp(r"[\',\.\(\)\[\]\!\?]"), '');
+  title = title.replaceAll(new RegExp(r' +'), '-');
+  return title;
+}
+
+void publish() {
   prepareDeploy();
   var files = getMarkdownFiles();
   var posts = files.map(readPost).toList();

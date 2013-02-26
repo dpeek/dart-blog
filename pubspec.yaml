@@ -7,6 +7,7 @@ dependencies:
   markdown:
     path: /ws/dart/markdown
   yaml: any
+  args: any
   intl: any
   csslib: any
 
