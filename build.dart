@@ -45,8 +45,7 @@ void createPost(String title) {
 title: $title
 date: $date
 ---''';
-  print(path);
-//  new File(path).writeAsStringSync(content, mode:FileMode.WRITE, encoding:Encoding.UTF_8);
+  new File(path).writeAsStringSync(content, mode:FileMode.WRITE, encoding:Encoding.UTF_8);
 }
 
 /// Sanitize a title for use in a file path
